@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="Order now"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="orderNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/prdPrice"
+        android:layout_below="@id/bookName"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/quanntityTxt"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:text="Quantity :"
+        android:layout_below="@id/prdPrice"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/quantityControls"
+        android:layout_below="@id/quanntityTxt"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/prdQty"
+            android:textSize="@dimen/text"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:onClick="increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:text="-"
+            android:onClick="decrement"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/supInfoLable"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:text="Supplier "
+        android:textStyle="bold"
+        android:layout_below="@id/quantityControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/supName"
+        android:layout_below="@id/supInfoLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/supContact"
+        android:layout_below="@id/supName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
